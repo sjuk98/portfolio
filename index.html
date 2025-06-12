@@ -863,7 +863,7 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Shiju UK" class="profile-img">
+                    <img src="image/sj.jpeg" alt="Shiju UK" class="profile-img">
                 </div>
             </div>
 
@@ -980,7 +980,7 @@
             
             <div class="projects-grid">
                 <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="THARACART" class="project-img">
+                    <img src="image/thara.png" alt="THARACART" class="project-img">
                     <div class="project-content">
                         <h3 class="project-title">THARACART</h3>
                         <p class="project-description">A comprehensive e-commerce platform with seller management system, featuring advanced API integrations and performance optimization.</p>
@@ -998,7 +998,7 @@
                 </div>
                 
                 <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ATRIUM SCHOOL OF DESIGN" class="project-img">
+                    <img src="image/brook.png" alt="ATRIUM SCHOOL OF DESIGN" class="project-img">
                     <div class="project-content">
                         <h3 class="project-title">ATRIUM SCHOOL OF DESIGN</h3>
                         <p class="project-description">Full-stack web application for design institute with custom CMS and student management system.</p>
@@ -1016,7 +1016,7 @@
                 </div>
                 
                 <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="BROOK VALLEY" class="project-img">
+                    <img src="image/brook.png" alt="BROOK VALLEY" class="project-img">
                     <div class="project-content">
                         <h3 class="project-title">BROOK VALLEY</h3>
                         <p class="project-description">Dynamic resort website with booking system, admin panel, and customer engagement features.</p>
@@ -1061,5 +1061,28 @@
             <p class="footer-text">Designed & Built by Shiju UK</p>
         </div>
     </footer>
+</body>
+</html>
 
-    <script
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const target = button.getAttribute("data-tab") + "-content";
+
+        // Remove active class from all buttons
+        tabButtons.forEach(btn => btn.classList.remove("active"));
+        // Add active class to clicked button
+        button.classList.add("active");
+
+        // Hide all content sections
+        tabContents.forEach(content => content.classList.remove("active"));
+        // Show the target content
+        document.getElementById(target).classList.add("active");
+      });
+    });
+  });
+</script>
