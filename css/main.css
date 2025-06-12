@@ -361,7 +361,7 @@
             border: none;
             color: var(--light);
             font-family: 'Fira Code', monospace;
-            padding: 10px 20px;
+            padding: 10px 4px;
             cursor: pointer;
             position: relative;
             transition: all 0.3s ease;
