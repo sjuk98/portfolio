@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shiju UK - Senior Software Developer specializing in Node.js, Python Django, and backend systems">
+    <meta name="keywords" content="Software Developer, Backend Engineer, Node.js, Django, API Development">
+    <title>Shiju UK | Senior Software Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+<body>
+    <div class="loader-wrapper">
+        <div class="loader-code">
+            <span class="code-line">LoadingPortfolio()</span>
+            <span class="code-line">InitializingComponents()</span>
+            <span class="code-line">RenderingUI()</span>
+        </div>
+        <div class="loader-progress"></div>
+    </div>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <span class="logo-code">&lt;SUK/&gt;</span>
+            </div>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="navbar-extra">
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="navbar-toggler" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">Hello, I'm <span class="text-highlight">Shiju UK</span></span>
+                        <span class="title-line">Senior Software Developer</span>
+                    </h1>
+                    <p class="hero-subtitle">Specializing in backend systems, API development, and scalable architecture with Node.js and Python Django.</p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <span class="window-dot red"></span>
+                            <span class="window-dot yellow"></span>
+                            <span class="window-dot green"></span>
+                            <span class="window-title">backend-service.js</span>
+                        </div>
+                        <div class="window-content">
+                            <pre><code class="language-javascript">const express = require('express');
+const app = express();
+
+// API Routes
+app.get('/api/projects', (req, res) => {
+  const projects = getProjects();
+  res.json(projects);
+});
+
+// Database connection
+connectDB()
+  .then(() => {
+    app.listen(3000, () => {
+      console.log('Server running on port 3000');
+    });
+  });</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-scroll-indicator">
+                <span>Scroll Down</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <section id="about" class="section about-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">01</span>
+                    <span>About Me</span>
+                </h2>
+                <p class="section-subtitle">Get to know the developer behind the code</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="image/sj.jpeg" alt="Shiju UK" class="profile-image">
+                        <div class="image-border"></div>
+                        <div class="image-dots"></div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3 class="about-heading">Backend Specialist with Full-Stack Capabilities</h3>
+                    <p>Results-driven Senior Software Developer with 3+ years of experience in designing and implementing robust backend systems. My expertise lies in creating scalable, high-performance applications using Node.js, Express, and Python Django.</p>
+                    <p>I take pride in architecting solutions that are not only functional but also maintainable and secure. My approach combines technical excellence with business acumen to deliver impactful results.</p>
+                    <div class="about-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Name:</span>
+                            <span class="meta-value">Shiju UK</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Email:</span>
+                            <span class="meta-value">shijuuk98@gmail.com</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Experience:</span>
+                            <span class="meta-value">3+ Years</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Location:</span>
+                            <span class="meta-value">Kerala, India</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-secondary">Download CV</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section experience-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">02</span>
+                    <span>Professional Journey</span>
+                </h2>
+                <p class="section-subtitle">Where I've worked and what I've accomplished</p>
+            </div>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - Present</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Senior Software Developer</h3>
+                        <span class="timeline-company">First Logic Meta Lab</span>
+                        <ul class="timeline-description">
+                            <li>Lead backend development for multiple web applications using Python Django</li>
+                            <li>Architected and implemented RESTful APIs serving 10,000+ daily requests</li>
+                            <li>Optimized server infrastructure, reducing hosting costs by 30%</li>
+                            <li>Mentored junior developers in best practices and code quality standards</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2022 - 2023</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Junior Software Developer</h3>
+                        <span class="timeline-company">First Logic Meta Lab</span>
+                        <ul class="timeline-description">
+                            <li>Developed and maintained Django-based web applications</li>
+                            <li>Implemented payment gateway integrations (Stripe, Razorpay)</li>
+                            <li>Created authentication systems using JWT and OAuth</li>
+                            <li>Collaborated on database design and optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section projects-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">03</span>
+                    <span>Featured Projects</span>
+                </h2>
+                <p class="section-subtitle">Selected work that demonstrates my expertise</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link-icon" aria-label="View code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="link-icon" aria-label="Live demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Tharacart</h3>
+                    <p class="project-description">E-commerce platform with complete seller management system and marketplace functionality.</p>
+                    <div class="project-tech">
+                        <span>Node.js</span>
+                        <span>Express</span>
+                        <span>EJS</span>
+                        <span>MySQL</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link-icon" aria-label="View code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="link-icon" aria-label="Live demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Atrium School of Design</h3>
+                    <p class="project-description">Full-stack web application for design institute with admin dashboard and student portal.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>Bootstrap</span>
+                        <span>PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-hotel"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link-icon" aria-label="View code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="link-icon" aria-label="Live demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Brook Valley</h3>
+                    <p class="project-description">Resort management system with booking engine, admin panel, and customer portal.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>JavaScript</span>
+                        <span>Firebase</span>
+                    </div>
+                </div>
+            </div>
+            <div class="section-footer">
+                <a href="#" class="btn btn-outline">View All Projects</a>
+            </div>
+        </section>
+
+        <section id="skills" class="section skills-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">04</span>
+                    <span>Technical Skills</span>
+                </h2>
+                <p class="section-subtitle">Tools and technologies I work with</p>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-server"></i>
+                        Backend Development
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python Django</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Express.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">RESTful APIs</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 92%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-database"></i>
+                        Database & Storage
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">MySQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">PostgreSQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Firebase</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MongoDB</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-laptop-code"></i>
+                        Frontend & More
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">HTML/CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Docker</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Git</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">05</span>
+                    <span>Get In Touch</span>
+                </h2>
+                <p class="section-subtitle">Let's discuss your project or opportunity</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4 class="info-title">Email</h4>
+                            <a href="mailto:shijuuk98@gmail.com" class="info-value">shijuuk98@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4 class="info-title">Phone</h4>
+                            <a href="tel:+919074159289" class="info-value">+91 9074159289</a>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4 class="info-title">Location</h4>
+                            <span class="info-value">Melattur, Malappuram, Kerala, India</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo-code">&lt;SUK/&gt;</span>
+                <p class="footer-text">Senior Software Developer specializing in backend systems and API development.</p>
+            </div>
+            <div class="footer-links">
+                <h4 class="links-title">Quick Links</h4>
+                <ul class="links-list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4 class="links-title">Connect</h4>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/shiju-uk-1a320620a" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Shiju UK. All rights reserved.</p>
+            <p>Built with <i class="fas fa-heart"></i> and <i class="fas fa-code"></i></p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

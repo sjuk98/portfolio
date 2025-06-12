@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiju UK | Senior Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #ff2e2e;
+            --primary-dark: #cc0000;
+            --secondary: #000000;
+            --dark: #0a0a0a;
+            --light: #f0f0f0;
+            --gray: #333333;
+            --light-gray: #1a1a1a;
+            --terminal-green: #00ff41;
+            --terminal-blue: #29b6f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--secondary);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        ::selection {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Terminal-like scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 4px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header - Matrix Style */
+        header {
+            background-color: var(--dark);
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid var(--primary);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+        }
+
+        .matrix-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+        }
+
+        .logo {
+            font-family: 'Fira Code', monospace;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--light);
+        }
+
+        .logo:hover {
+            animation: glitch 0.5s linear infinite;
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            font-family: 'Fira Code', monospace;
+            color: var(--light);
+            text-decoration: none;
+            font-size: 0.9rem;
+            position: relative;
+            padding: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-title span {
+            color: var(--primary);
+            position: relative;
+        }
+
+        .hero-title span::after {
+            content: '_';
+            position: absolute;
+            right: -10px;
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            from, to { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--light);
+            opacity: 0.8;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            border: 1px solid var(--primary);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 46, 46, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--light);
+            border: 1px solid var(--light);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light);
+            color: var(--dark);
+            transform: translateY(-3px);
+        }
+
+        .hero-bg-code {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.1;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.8rem;
+            line-height: 1.8;
+            user-select: none;
+            z-index: 0;
+        }
+
+        /* About Section */
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 60px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+        }
+
+        .about-content {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .profile-img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.5s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-img:hover {
+            transform: translateY(-10px);
+        }
+
+        .tech-stack {
+            margin-top: 40px;
+        }
+
+        .tech-stack h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-family: 'Fira Code', monospace;
+        }
+
+        .tech-icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .tech-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--light-gray);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .tech-icon:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 46, 46, 0.3);
+        }
+
+        /* Experience Section */
+        .experience-tabs {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--light-gray);
+            padding-bottom: 10px;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            color: var(--light);
+            font-family: 'Fira Code', monospace;
+            padding: 10px 20px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            color: var(--primary);
+        }
+
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -11px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .job {
+            background: var(--light-gray);
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 3px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .job:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .job-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .job-company {
+            color: var(--primary);
+            font-family: 'Fira Code', monospace;
+            margin-bottom: 10px;
+        }
+
+        .job-date {
+            color: var(--light);
+            opacity: 0.7;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3px 10px;
+            border-radius: 20px;
+        }
+
+        .job-description {
+            margin-top: 15px;
+        }
+
+        .job-description li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .job-description li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: var(--light-gray);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+            border-color: var(--primary);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .project-description {
+            margin-bottom: 20px;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-family: 'Fira Code', monospace;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .project-link {
+            color: var(--light);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: var(--primary);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--light-gray);
+            border-radius: 8px;
+            padding: 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .contact-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-email {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            display: inline-block;
+            color: var(--primary);
+            text-decoration: none;
+            position: relative;
+        }
+
+        .contact-email::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .contact-email:hover::after {
+            width: 100%;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: var(--light);
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .footer-text {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Terminal Effect */
+        .terminal {
+            background: var(--dark);
+            border-radius: 8px;
+            padding: 20px;
+            font-family: 'Fira Code', monospace;
+            margin-top: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .terminal-header {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .terminal-btn {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .terminal-btn.red {
+            background: var(--primary);
+        }
+
+        .terminal-btn.yellow {
+            background: #ffcc00;
+        }
+
+        .terminal-btn.green {
+            background: var(--terminal-green);
+        }
+
+        .terminal-title {
+            flex: 1;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.8rem;
+        }
+
+        .terminal-body {
+            line-height: 1.6;
+        }
+
+        .terminal-line {
+            margin-bottom: 10px;
+        }
+
+        .terminal-prompt {
+            color: var(--terminal-green);
+        }
+
+        .terminal-command {
+            color: var(--terminal-blue);
+        }
+
+        .terminal-cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background: var(--terminal-green);
+            vertical-align: middle;
+            margin-left: 5px;
+            animation: blink 1s step-end infinite;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .about-content {
+                flex-direction: column;
+            }
+
+            .profile-img {
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .contact-section {
+                padding: 40px 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .terminal {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="matrix-bg" id="matrixCanvas"></div>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <span>&lt;</span>SHIJU_UK<span>/&gt;</span>
+                </a>
+                <nav>
+                    <ul id="navMenu">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Hi, I'm <span>Shiju UK</span></h1>
+                <h2 class="hero-subtitle">Senior Software Engineer specializing in backend development with Node.js, Python Django, and scalable system architecture.</h2>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg-code">
+            <pre>
+<span style="color: var(--terminal-green)">class</span> <span style="color: var(--terminal-blue)">SeniorDeveloper</span> {
+    <span style="color: var(--terminal-green)">constructor</span>() {
+        <span style="color: var(--terminal-green)">this</span>.name = <span style="color: #ff9800;">"Shiju UK"</span>;
+        <span style="color: var(--terminal-green)">this</span>.title = <span style="color: #ff9800;">"Senior Software Engineer"</span>;
+        <span style="color: var(--terminal-green)">this</span>.skills = [<span style="color: #ff9800;">"Node.js"</span>, <span style="color: #ff9800;">"Python Django"</span>, <span style="color: #ff9800;">"API Development"</span>];
+    }
+
+    <span style="color: var(--terminal-green)">build</span>() {
+        <span style="color: var(--terminal-green)">return</span> <span style="color: #ff9800;">"Scalable, high-performance applications"</span>;
+    }
+}
+
+<span style="color: var(--terminal-green)">const</span> me = <span style="color: var(--terminal-green)">new</span> <span style="color: var(--terminal-blue)">SeniorDeveloper</span>();
+<span style="color: var(--terminal-blue)">console</span>.<span style="color: var(--terminal-green)">log</span>(me.<span style="color: var(--terminal-green)">build</span>());
+            </pre>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a results-driven Senior Software Developer with 3+ years of experience in building robust backend systems and scalable web applications. My expertise lies in architecting high-performance solutions using Node.js, Express, and Python Django.</p>
+                    <p>I specialize in API development, third-party integrations, server management, and database design. My work focuses on creating secure, efficient, and maintainable systems that deliver exceptional user experiences.</p>
+                    <p>Beyond coding, I'm passionate about system architecture, performance optimization, and mentoring junior developers. I thrive in challenging environments that push me to grow and innovate.</p>
+                    
+                    <div class="tech-stack">
+                        <h3>My Tech Stack</h3>
+                        <div class="tech-icons">
+                            <div class="tech-icon" title="Node.js"><i class="fab fa-node-js"></i></div>
+                            <div class="tech-icon" title="Python"><i class="fab fa-python"></i></div>
+                            <div class="tech-icon" title="Django"><i class="fas fa-database"></i></div>
+                            <div class="tech-icon" title="Express"><i class="fas fa-server"></i></div>
+                            <div class="tech-icon" title="Firebase"><i class="fas fa-fire"></i></div>
+                            <div class="tech-icon" title="PostgreSQL"><i class="fas fa-database"></i></div>
+                            <div class="tech-icon" title="Docker"><i class="fab fa-docker"></i></div>
+                            <div class="tech-icon" title="Git"><i class="fab fa-git-alt"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="image/sj.jpeg" alt="Shiju UK" class="profile-img">
+                </div>
+            </div>
+
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="terminal-btn red"></div>
+                    <div class="terminal-btn yellow"></div>
+                    <div class="terminal-btn green"></div>
+                    <div class="terminal-title">shiju@terminal: ~/experience</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line"><span class="terminal-prompt">$</span> <span class="terminal-command">cat skills.txt</span></div>
+                    <div class="terminal-line">Backend Development: Node.js, Express.js, Python Django</div>
+                    <div class="terminal-line">Databases: Firestore, Firebase, MySQL, PostgreSQL</div>
+                    <div class="terminal-line">APIs: RESTful, GraphQL, Third-party integrations</div>
+                    <div class="terminal-line">DevOps: Docker, cPanel, Server Management</div>
+                    <div class="terminal-line"><span class="terminal-prompt">$</span> <span class="terminal-command">./build_project --type=scalable --performance=high</span></div>
+                    <div class="terminal-line">Building optimized backend system...</div>
+                    <div class="terminal-line">Success! System ready for production <span class="terminal-cursor"></span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Journey</h2>
+            
+            <div class="experience-tabs">
+                <button class="tab-btn active" data-tab="experience">Experience</button>
+                <button class="tab-btn" data-tab="education">Education</button>
+                <button class="tab-btn" data-tab="certifications">Certifications</button>
+            </div>
+            
+            <div class="tab-content active" id="experience-content">
+                <div class="job">
+                    <div class="job-title">
+                        <span>Senior Software Developer</span>
+                        <span class="job-date">JUN 2023 - PRESENT</span>
+                    </div>
+                    <div class="job-company">First Logic Meta Lab, Perinthalmanna, Malappuram</div>
+                    <ul class="job-description">
+                        <li>Led the development of complex web applications and APIs using Python Django, improving system performance by 40% through optimization techniques</li>
+                        <li>Architected and implemented server infrastructure, reducing deployment times by 30% through automation</li>
+                        <li>Mentored junior developers, establishing coding standards and best practices for the team</li>
+                        <li>Implemented CI/CD pipelines that reduced production bugs by 25%</li>
+                    </ul>
+                </div>
+                
+                <div class="job">
+                    <div class="job-title">
+                        <span>Junior Software Developer</span>
+                        <span class="job-date">OCT 2022 – MAY 2023</span>
+                    </div>
+                    <div class="job-company">First Logic Meta Lab, Perinthalmanna, Malappuram</div>
+                    <ul class="job-description">
+                        <li>Developed and maintained web applications using Python Django framework</li>
+                        <li>Implemented RESTful APIs that served over 10,000 daily requests</li>
+                        <li>Collaborated with frontend developers to integrate user-facing elements</li>
+                        <li>Participated in code reviews and contributed to architectural decisions</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="education-content">
+                <div class="job">
+                    <div class="job-title">
+                        <span>BSC Computer Science</span>
+                        <span class="job-date">2017 - 2020</span>
+                    </div>
+                    <div class="job-company">College of Applied Science, Malappuram | Calicut University</div>
+                    <ul class="job-description">
+                        <li>Specialized in software development and system architecture</li>
+                        <li>Graduated with honors in backend development coursework</li>
+                        <li>Completed advanced projects in web application development</li>
+                    </ul>
+                </div>
+                
+                <div class="job">
+                    <div class="job-title">
+                        <span>HSE – Physical Science</span>
+                        <span class="job-date">2015 - 2017</span>
+                    </div>
+                    <div class="job-company">Technical Higher Secondary School, Perinthalmanna (IHRD)</div>
+                    <ul class="job-description">
+                        <li>Focus on computer science fundamentals</li>
+                        <li>Early exposure to programming concepts</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="certifications-content">
+                <div class="job">
+                    <div class="job-title">
+                        <span>Advanced Python Certification</span>
+                        <span class="job-date">JUN 2020 – OCT 2020</span>
+                    </div>
+                    <div class="job-company">I-NET Infotech, Cochin</div>
+                    <ul class="job-description">
+                        <li>Mastered advanced Python concepts including decorators, generators, and context managers</li>
+                        <li>Developed expertise in Django framework architecture</li>
+                        <li>Completed capstone project with real-world application</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-title">Selected Projects</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="image/thara.png" alt="THARACART" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">THARACART</h3>
+                        <p class="project-description">A comprehensive e-commerce platform with seller management system, featuring advanced API integrations and performance optimization.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">EJS</span>
+                            <span class="tech-tag">Firebase</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img src="image/brook.png" alt="ATRIUM SCHOOL OF DESIGN" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">ATRIUM SCHOOL OF DESIGN</h3>
+                        <p class="project-description">Full-stack web application for design institute with custom CMS and student management system.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img src="image/brook.png" alt="BROOK VALLEY" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">BROOK VALLEY</h3>
+                        <p class="project-description">Dynamic resort website with booking system, admin panel, and customer engagement features.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Stripe API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="contact-section">
+                <div class="contact-content">
+                    <h2 class="contact-title">Get In Touch</h2>
+                    <p class="contact-subtitle">I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll do my best to get back to you!</p>
+                    <a href="mailto:shijuuk98@gmail.com" class="contact-email">shijuuk98@gmail.com</a>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/shiju-uk-1a320620a" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-text">Designed & Built by Shiju UK</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const target = button.getAttribute("data-tab") + "-content";
+
+        // Remove active class from all buttons
+        tabButtons.forEach(btn => btn.classList.remove("active"));
+        // Add active class to clicked button
+        button.classList.add("active");
+
+        // Hide all content sections
+        tabContents.forEach(content => content.classList.remove("active"));
+        // Show the target content
+        document.getElementById(target).classList.add("active");
+      });
+    });
+  });
+</script>
